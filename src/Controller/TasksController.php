@@ -26,8 +26,8 @@ class TasksController extends AppController {
      */
     public function index() {
         // For returning all the tasks
-        $allTasks = $this->Tasks->getAllTasks();
-        $this->success['data'] = $allTasks;
+        $arrTasks = $this->Tasks->getAllTasks();
+        $this->success['data'] = $arrTasks;
         return $this->sendJSONResponse($this->success);
     }
 

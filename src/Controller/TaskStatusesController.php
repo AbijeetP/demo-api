@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 
+require_once __DIR__ . '/../Model/Table/TasksStatusesTable.php';
+
 /**
  * TaskStatuses Controller
  *
@@ -11,17 +13,21 @@ use App\Controller\AppController;
  * @method \App\Model\Entity\TaskStatus[] paginate($object = null, array $settings = [])
  */
 class TaskStatusesController extends AppController {
-
+    
+    public function initialize() {
+        parent::initialize();
+        $this->TasksStatuses = new \TaskStatusesTable();
+    }
+    
     /**
      * Index method
      *
      * @return \Cake\Http\Response|void
      */
     public function index() {
-        $taskStatuses = $this->paginate($this->TaskStatuses);
-
-        $this->set(compact('taskStatuses'));
-        $this->set('_serialize', ['taskStatuses']);
+        $arrTaskStatuses = $this->TasksStatuses->getAllTaskStatuses();
+        $this->success['data'] = $arrTaskStatuses;
+        return $this->sendJSONResponse($this->success);
     }
 
     /**
@@ -32,12 +38,7 @@ class TaskStatusesController extends AppController {
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function view($id = null) {
-        $taskStatus = $this->TaskStatuses->get($id, [
-            'contain' => []
-        ]);
-
-        $this->set('taskStatus', $taskStatus);
-        $this->set('_serialize', ['taskStatus']);
+        return $this->sendJSONResponse($this->success);
     }
 
     /**
@@ -46,18 +47,7 @@ class TaskStatusesController extends AppController {
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
     public function add() {
-        $taskStatus = $this->TaskStatuses->newEntity();
-        if ($this->request->is('post')) {
-            $taskStatus = $this->TaskStatuses->patchEntity($taskStatus, $this->request->getData());
-            if ($this->TaskStatuses->save($taskStatus)) {
-                $this->Flash->success(__('The task status has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The task status could not be saved. Please, try again.'));
-        }
-        $this->set(compact('taskStatus'));
-        $this->set('_serialize', ['taskStatus']);
+        return $this->sendJSONResponse($this->success);
     }
 
     /**
@@ -68,20 +58,7 @@ class TaskStatusesController extends AppController {
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function edit($id = null) {
-        $taskStatus = $this->TaskStatuses->get($id, [
-            'contain' => []
-        ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $taskStatus = $this->TaskStatuses->patchEntity($taskStatus, $this->request->getData());
-            if ($this->TaskStatuses->save($taskStatus)) {
-                $this->Flash->success(__('The task status has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The task status could not be saved. Please, try again.'));
-        }
-        $this->set(compact('taskStatus'));
-        $this->set('_serialize', ['taskStatus']);
+        return $this->sendJSONResponse($this->success);
     }
 
     /**
@@ -92,15 +69,7 @@ class TaskStatusesController extends AppController {
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function delete($id = null) {
-        $this->request->allowMethod(['post', 'delete']);
-        $taskStatus = $this->TaskStatuses->get($id);
-        if ($this->TaskStatuses->delete($taskStatus)) {
-            $this->Flash->success(__('The task status has been deleted.'));
-        } else {
-            $this->Flash->error(__('The task status could not be deleted. Please, try again.'));
-        }
-
-        return $this->redirect(['action' => 'index']);
+        return $this->sendJSONResponse($this->success);
     }
 
 }

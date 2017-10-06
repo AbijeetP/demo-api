@@ -46,6 +46,7 @@ Router::defaultRouteClass(DashedRoute::class);
 Router::extensions(['json']);
 Router::scope('/', function($routes) {
     $routes->resources('Tasks');
+    $routes->resources('TaskStatuses');
 });
 
 Router::scope('/', function (RouteBuilder $routes) {
