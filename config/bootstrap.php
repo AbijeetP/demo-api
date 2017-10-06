@@ -70,6 +70,7 @@ try {
     Configure::config('default', new PhpConfig());
     Configure::load('app', 'default', false);
     Configure::load('messages', 'default');
+    Configure::load('settings', 'default');
 } catch (\Exception $e) {
     exit($e->getMessage() . "\n");
 }

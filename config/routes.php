@@ -47,6 +47,7 @@ Router::extensions(['json']);
 Router::scope('/', function($routes) {
     $routes->resources('Tasks');
     $routes->resources('TaskStatuses');
+    $routes->resources('BootstrapContributors');
 });
 
 Router::scope('/', function (RouteBuilder $routes) {
