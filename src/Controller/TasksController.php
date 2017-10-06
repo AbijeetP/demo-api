@@ -13,12 +13,12 @@ require_once __DIR__ . '/../Model/Table/TasksTable.php';
  * @method \App\Model\Entity\Task[] paginate($object = null, array $settings = [])
  */
 class TasksController extends AppController {
-    
+
     public function initialize() {
         parent::initialize();
         $this->Tasks = new \TasksTable();
     }
-    
+
     /**
      * Index method
      *
@@ -27,6 +27,26 @@ class TasksController extends AppController {
     public function index() {
         // For returning all the tasks
         $arrTasks = $this->Tasks->getAllTasks();
+        $this->success['data'] = $arrTasks;
+        return $this->sendJSONResponse($this->success);
+    }
+
+    /**
+     * Returns tasks count
+     * @return type
+     */
+    public function fetchTasksByStatus() {
+        $arrTasks = $this->Tasks->getTasksByStatus();
+        $this->success['data'] = $arrTasks;
+        return $this->sendJSONResponse($this->success);
+    }
+
+    /**
+     * Returns tasks count
+     * @return type
+     */
+    public function getCompletedTasksByDay() {
+        $arrTasks = $this->Tasks->getCompletedTasksByDay();
         $this->success['data'] = $arrTasks;
         return $this->sendJSONResponse($this->success);
     }
