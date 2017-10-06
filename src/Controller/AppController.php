@@ -28,7 +28,12 @@ use Cake\Event\Event;
  * @link https://book.cakephp.org/3.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-
+    
+    // Response objects 
+    protected $success = ['success' => true, 'code' => 200, 'data' => NULL];
+    protected $failure = ['success' => false, 'code' => 202, 'data' => NULL];
+    protected $notFound = ['success' => false, 'code' => 404, 'data' => NULL, 'message' => ''];
+    
     /**
      * Initialization hook method.
      *
@@ -43,7 +48,7 @@ class AppController extends Controller {
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-        
+
         $this->autoRender = false;
         /*
          * Enable the following components for recommended CakePHP security settings.
@@ -53,6 +58,18 @@ class AppController extends Controller {
 //        $this->loadComponent('Csrf');
     }
 
+    /**
+     * Description : This method is used to send response object in JSON format
+     * @param array $responseObj
+     */
+    protected function sendJSONResponse($responseObj) {
+        $content = json_encode($responseObj);
+        $this->response->getBody()->write($content);
+        $this->response = $this->response->withType('json');
+        $this->response = $this->response->withHeader('X-Powered-By', 'Osmosys software solutions pvt. ltd.');
+        return $this->response;
+    }
+    
     /**
      * Before render callback.
      *
@@ -64,7 +81,7 @@ class AppController extends Controller {
         // and should not be used in production. You should instead set "_serialize"
         // in each action as required.
         if (!array_key_exists('_serialize', $this->viewVars) &&
-                in_array($this->response->type(), ['application/json', 'application/xml'])
+            in_array($this->response->type(), ['application/json', 'application/xml'])
         ) {
             $this->set('_serialize', true);
         }
