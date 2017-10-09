@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Filesystem\File;
+use Cake\I18n\Date;
+use Cake\Core\Configure;
 
 /**
  * BootstrapContributors Controller
@@ -19,7 +21,7 @@ class BootstrapContributorsController extends AppController {
      * @return \Cake\Http\Response|void
      */
     public function index() {
-        $file = new File('uploads/contributors.json');
+        $file = new File($this->getFileNameToReadInfo());
         $contents = $file->read();
         $file->close();
         $this->success['data'] = json_decode($contents);
@@ -67,5 +69,16 @@ class BootstrapContributorsController extends AppController {
     public function delete($id = null) {
         return $this->sendJSONResponse($this->success);
     }
-
+    
+    /**
+     * File name for reading Bootstrap contributors information
+     * @return string
+     */
+    private function getFileNameToReadInfo(){
+        $objDate = new Date();
+        $formattedToday = $objDate->format(Configure::read('DATE_FORMAT'));
+        $formattedTomorrowday = $objDate->modify('+1 day')->format(Configure::read('DATE_FORMAT'));
+        $fileName = 'uploads/contributors_' . $formattedToday . '-' . $formattedTomorrowday . '.json';
+        return $fileName;
+    }
 }

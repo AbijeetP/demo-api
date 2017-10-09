@@ -1,0 +1,110 @@
+{
+	"variables": [],
+	"info": {
+		"name": "OSM-demo-portal",
+		"_postman_id": "8f17b882-43e7-58b2-3fba-6dd8a08a5967",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "task-statuses",
+			"request": {
+				"url": {
+					"raw": "http://10.0.0.160/osm-demo-api/task-statuses?XDEBUG_SESSION_START=netbeans-xdebug",
+					"protocol": "http",
+					"host": [
+						"10",
+						"0",
+						"0",
+						"160"
+					],
+					"path": [
+						"osm-demo-api",
+						"task-statuses"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "netbeans-xdebug",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "tasks",
+			"request": {
+				"url": {
+					"raw": "http://10.0.0.160/osm-demo-api/tasks?XDEBUG_SESSION_START=netbeans-xdebug",
+					"protocol": "http",
+					"host": [
+						"10",
+						"0",
+						"0",
+						"160"
+					],
+					"path": [
+						"osm-demo-api",
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "netbeans-xdebug",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "fetchTasksByStatus",
+			"request": {
+				"url": "http://10.0.0.160/osm-demo-api/tasks/fetchTasksByStatus",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getCompletedTasksByDay",
+			"request": {
+				"url": "http://10.0.0.160/osm-demo-api/tasks/getCompletedTasksByDay",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "bootstrap-contributors",
+			"request": {
+				"url": "http://10.0.0.160/osm-demo-api/bootstrap-contributors",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

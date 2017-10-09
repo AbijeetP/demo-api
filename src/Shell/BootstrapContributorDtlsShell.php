@@ -6,6 +6,7 @@ use Cake\Console\Shell;
 use Cake\Http\Client;
 use Cake\Core\Configure;
 use Cake\Filesystem\File;
+use Cake\I18n\Date;
 
 class BootstrapContributorDtlsShell extends Shell {
 
@@ -15,11 +16,23 @@ class BootstrapContributorDtlsShell extends Shell {
     public function main() {
         $arrUsersList = $this->getBootstrapContributorsList();
         if ($arrUsersList) {
-            $userDtls = $this->bildUserDtlsData($arrUsersList);
-            $file = new File('webroot/uploads/contributors.json');
+            $userDtls = $this->buildUserDtlsData($arrUsersList);
+            $file = new File($this->getFileName());
             $file->write(json_encode($userDtls));
             $file->close();
         }
+    }
+    
+    /**
+     * Returns the file name with today's and tomorrow's date.
+     */
+    private function getFileName(){
+        $objDate = new Date();
+        $formattedTodaysDate = $objDate->format(Configure::read('DATE_FORMAT'));
+        $formattedTomorrowsDate = $objDate->modify('+1 day')->format(Configure::read('DATE_FORMAT'));
+         
+        $fileName = 'webroot/uploads/contributors_' . $formattedTodaysDate . '-' . $formattedTomorrowsDate . '.json';
+        return $fileName;
     }
 
     /**
@@ -47,7 +60,7 @@ class BootstrapContributorDtlsShell extends Shell {
      * Returns user related information
      * @param type $arrUsersList
      */
-    private function bildUserDtlsData($arrUsersList) {
+    private function buildUserDtlsData($arrUsersList) {
         $arrFinalDtls = [];
         $http = new Client();
 
