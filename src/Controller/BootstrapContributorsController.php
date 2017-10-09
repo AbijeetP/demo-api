@@ -4,8 +4,6 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Filesystem\File;
-use Cake\I18n\Date;
-use Cake\Core\Configure;
 
 /**
  * BootstrapContributors Controller
@@ -75,10 +73,8 @@ class BootstrapContributorsController extends AppController {
      * @return string
      */
     private function getFileNameToReadInfo(){
-        $objDate = new Date();
-        $formattedToday = $objDate->format(Configure::read('DATE_FORMAT'));
-        $formattedTomorrowday = $objDate->modify('+1 day')->format(Configure::read('DATE_FORMAT'));
-        $fileName = 'uploads/contributors_' . $formattedToday . '-' . $formattedTomorrowday . '.json';
+        $latestFile = scandir('uploads', SCANDIR_SORT_DESCENDING);
+        $fileName = 'uploads/' . $latestFile[0];
         return $fileName;
     }
 }
