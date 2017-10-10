@@ -30,8 +30,7 @@ class BootstrapContributorDtlsShell extends Shell {
         $objDate = new Date();
         $formattedTodaysDate = $objDate->format(Configure::read('DATE_FORMAT'));
         $formattedTomorrowsDate = $objDate->modify('+1 day')->format(Configure::read('DATE_FORMAT'));
-         
-        $fileName = 'webroot/uploads/contributors_' . $formattedTodaysDate . '-' . $formattedTomorrowsDate . '.json';
+        $fileName = 'webroot/' . Configure::read('BOOTSTRAP_CONTRIBUTOR_DIR_PATH') . 'contributors_' . $formattedTodaysDate . '_' . $formattedTomorrowsDate . '.json';
         return $fileName;
     }
 

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Filesystem\File;
+use Cake\Core\Configure;
 
 /**
  * BootstrapContributors Controller
@@ -73,8 +74,8 @@ class BootstrapContributorsController extends AppController {
      * @return string
      */
     private function getFileNameToReadInfo(){
-        $latestFile = scandir('uploads', SCANDIR_SORT_DESCENDING);
-        $fileName = 'uploads/' . $latestFile[0];
+        $latestFile = scandir(Configure::read('BOOTSTRAP_CONTRIBUTOR_DIR_PATH'), SCANDIR_SORT_DESCENDING);
+        $fileName = Configure::read('BOOTSTRAP_CONTRIBUTOR_DIR_PATH') . $latestFile[0];
         return $fileName;
     }
 }
