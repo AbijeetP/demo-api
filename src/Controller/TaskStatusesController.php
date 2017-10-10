@@ -16,7 +16,7 @@ class TaskStatusesController extends AppController {
     
     public function initialize() {
         parent::initialize();
-        $this->TasksStatuses = new \TaskStatusesTable();
+        $this->TasksStatuses = new \App\Model\Table\TaskStatusesTable();
     }
     
     /**

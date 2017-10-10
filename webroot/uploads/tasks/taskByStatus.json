@@ -1,0 +1,22 @@
+[
+	{
+		"statusID": 4,
+		"statusName": "Planned",
+		"totalTasksCount": 5
+	},
+	{
+		"statusID": 1,
+		"statusName": "Blocked",
+		"totalTasksCount": 4
+	},
+	{
+		"statusID": 2,
+		"statusName": "Done",
+		"totalTasksCount": 4
+	},
+	{
+		"statusID": 3,
+		"statusName": "In Progress",
+		"totalTasksCount": 2
+	}
+]

@@ -6,5 +6,9 @@ return [
     'GOOGLE_MAP_API_KEY' => '&key=AIzaSyB1TgcfHxJc57VbtzoLUMpB8Z4E6QUI_Fg',
     'GITHUB_CLIENT_ID' => '491fab8d85ccd9a9a516',
     'GITHUB_CLIENT_SECRET' => 'de234faf19e6115b84884c14d14a650a26dfd502',
-    'DATE_FORMAT' => 'Y-m-d'
+    'DATE_FORMAT' => 'Y-m-d',
+    'GET_ALL_TASKS' => 'uploads/tasks/allTasks.json',
+    'GET_TASKS_BY_STATUS' => 'uploads/tasks/taskByStatus.json',
+    'GET_COMPLETED_TASKS_PER_DAY' => 'uploads/tasks/completedTasksPerDay.json',
+    'GET_ALL_TASK_STATUSES' => 'uploads/task-statuses/allTaskStatuses.json',
 ];

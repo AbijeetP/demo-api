@@ -1,0 +1,18 @@
+[
+	{
+		"statusID": 1,
+		"statusName": "Blocked"
+	},
+	{
+		"statusID": 2,
+		"statusName": "Done"
+	},
+	{
+		"statusID": 3,
+		"statusName": "In Progress"
+	},
+	{
+		"statusID": 4,
+		"statusName": "Planned"
+	}
+]

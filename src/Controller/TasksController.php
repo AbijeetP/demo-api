@@ -16,7 +16,7 @@ class TasksController extends AppController {
 
     public function initialize() {
         parent::initialize();
-        $this->Tasks = new \TasksTable();
+        $this->Tasks = new \App\Model\Table\TasksTable();
     }
 
     /**
