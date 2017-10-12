@@ -11,16 +11,11 @@
 			"name": "task-statuses",
 			"request": {
 				"url": {
-					"raw": "http://10.0.0.160/osm-demo-api/task-statuses?XDEBUG_SESSION_START=netbeans-xdebug",
-					"protocol": "http",
+					"raw": "{{DemoPortalAPI}}/task-statuses?XDEBUG_SESSION_START=netbeans-xdebug",
 					"host": [
-						"10",
-						"0",
-						"0",
-						"160"
+						"{{DemoPortalAPI}}"
 					],
 					"path": [
-						"osm-demo-api",
 						"task-statuses"
 					],
 					"query": [
@@ -44,16 +39,11 @@
 			"name": "tasks",
 			"request": {
 				"url": {
-					"raw": "http://10.0.0.160/osm-demo-api/tasks?XDEBUG_SESSION_START=netbeans-xdebug",
-					"protocol": "http",
+					"raw": "{{DemoPortalAPI}}/tasks?XDEBUG_SESSION_START=netbeans-xdebug",
 					"host": [
-						"10",
-						"0",
-						"0",
-						"160"
+						"{{DemoPortalAPI}}"
 					],
 					"path": [
-						"osm-demo-api",
 						"tasks"
 					],
 					"query": [
@@ -76,7 +66,7 @@
 		{
 			"name": "fetchTasksByStatus",
 			"request": {
-				"url": "http://10.0.0.160/osm-demo-api/tasks/fetchTasksByStatus",
+				"url": "{{DemoPortalAPI}}/tasks/fetchTasksByStatus",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -87,7 +77,7 @@
 		{
 			"name": "getCompletedTasksByDay",
 			"request": {
-				"url": "http://10.0.0.160/osm-demo-api/tasks/getCompletedTasksByDay",
+				"url": "{{DemoPortalAPI}}/tasks/getCompletedTasksByDay",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -98,7 +88,7 @@
 		{
 			"name": "bootstrap-contributors",
 			"request": {
-				"url": "http://10.0.0.160/osm-demo-api/bootstrap-contributors",
+				"url": "{{DemoPortalAPI}}/bootstrap-contributors",
 				"method": "GET",
 				"header": [],
 				"body": {},
