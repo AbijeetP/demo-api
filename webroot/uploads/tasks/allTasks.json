@@ -1,7 +1,7 @@
 [
 	{
 		"id": 1,
-		"taskName": "This is task one",
+		"taskName": "Create plugin for validating form details",
 		"dueDate": "05-10-2017",
 		"createdOn": "01-10-2017",
 		"completedOn": "",
@@ -10,7 +10,7 @@
 	},
 	{
 		"id": 2,
-		"taskName": "This is task two",
+		"taskName": "Setup base for the project",
 		"dueDate": "04-10-2017",
 		"createdOn": "01-10-2017",
 		"completedOn": "01-10-2017",
@@ -19,7 +19,7 @@
 	},
 	{
 		"id": 3,
-		"taskName": "This is task three",
+		"taskName": "Automate the deployment using gitlab CI & CD",
 		"dueDate": "07-10-2017",
 		"createdOn": "02-10-2017",
 		"completedOn": "",
@@ -28,7 +28,7 @@
 	},
 	{
 		"id": 4,
-		"taskName": "Vitae eget ipsum, cursus dui aenean",
+		"taskName": "Display task details using charts",
 		"dueDate": "09-10-2017",
 		"createdOn": "03-10-2017",
 		"completedOn": "05-10-2017",
@@ -37,7 +37,7 @@
 	},
 	{
 		"id": 5,
-		"taskName": "This is task five",
+		"taskName": "Write automatation unit test cases for the project",
 		"dueDate": "15-10-2017",
 		"createdOn": "03-10-2017",
 		"completedOn": "",
@@ -46,7 +46,7 @@
 	},
 	{
 		"id": 6,
-		"taskName": "A per ac, a nec et vitae vitae gravida, nulla luctus ultrices nonummy egestas",
+		"taskName": "Design user profile screen",
 		"dueDate": "11-10-2017",
 		"createdOn": "04-10-2017",
 		"completedOn": "",
@@ -55,7 +55,7 @@
 	},
 	{
 		"id": 7,
-		"taskName": "Velit eu est, quis eget, in vestibulum feugiat nibh nibh fermentum",
+		"taskName": "Modify the color of planned tasks",
 		"dueDate": "07-10-2017",
 		"createdOn": "05-10-2017",
 		"completedOn": "",
@@ -64,7 +64,7 @@
 	},
 	{
 		"id": 8,
-		"taskName": " Augue felis id, habitasse scelerisque sed eget, quam inceptos eu fames fringilla",
+		"taskName": "Display task details in datatable",
 		"dueDate": "08-10-2017",
 		"createdOn": "05-10-2017",
 		"completedOn": "05-10-2017",
@@ -73,7 +73,7 @@
 	},
 	{
 		"id": 9,
-		"taskName": "Velit eu est, quis eget, in vestibulum feugiat nibh nibh fermentum",
+		"taskName": "Design database for handling task details",
 		"dueDate": "10-10-2017",
 		"createdOn": "05-10-2017",
 		"completedOn": "",
@@ -82,7 +82,7 @@
 	},
 	{
 		"id": 10,
-		"taskName": "Dolor curabitur dolore, vivamus non praesent quis",
+		"taskName": "Allow users to store uploaded files in server",
 		"dueDate": "13-10-2017",
 		"createdOn": "05-10-2017",
 		"completedOn": "",
@@ -91,7 +91,7 @@
 	},
 	{
 		"id": 11,
-		"taskName": "Sagittis enim primis eu nulla, lobortis et molestie laoreet nunc",
+		"taskName": "Impelement token based authentication for the API",
 		"dueDate": "13-10-2017",
 		"createdOn": "07-10-2017",
 		"completedOn": "",
@@ -100,7 +100,7 @@
 	},
 	{
 		"id": 12,
-		"taskName": "Orci massa dolor, lorem augue aenean vitae orci, quam gravida volutpat eu sit eget",
+		"taskName": "Improve speed of the website",
 		"dueDate": "08-10-2017",
 		"createdOn": "07-10-2017",
 		"completedOn": "",
@@ -109,7 +109,7 @@
 	},
 	{
 		"id": 13,
-		"taskName": "Nullam quisque erat libero proin tempor.",
+		"taskName": "Send reminder mails to users whenever their task due date comes closer",
 		"dueDate": "07-10-2017",
 		"createdOn": "07-10-2017",
 		"completedOn": "08-10-2017",
@@ -118,7 +118,7 @@
 	},
 	{
 		"id": 14,
-		"taskName": "Magnis laudantium duis. ",
+		"taskName": "Integrate Google map API with the portal",
 		"dueDate": "12-10-2017",
 		"createdOn": "09-10-2017",
 		"completedOn": "",
@@ -127,7 +127,7 @@
 	},
 	{
 		"id": 15,
-		"taskName": "Mollis enim sed sapien amet praesent. ",
+		"taskName": "Send mail to users whenever a task is assigned to them",
 		"dueDate": "12-10-2017",
 		"createdOn": "12-10-2017",
 		"completedOn": "",

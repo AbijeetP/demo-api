@@ -86,6 +86,9 @@ class BootstrapContributorDtlsShell extends Shell {
                 $user['email'] = $userFullDtls['email'];
                 $user['bio'] = $userFullDtls['bio'];
                 $user['location'] = $userFullDtls['location'];
+                $user['followers'] = $userFullDtls['followers'];
+                $user['following'] = $userFullDtls['following'];
+                $user['profile_url'] = $userFullDtls['html_url'];
             }
 
             // 2. Get location lat & long details
