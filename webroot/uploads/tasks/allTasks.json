@@ -1,137 +1,137 @@
 [
-	{
-		"id": 1,
-		"taskName": "Create plugin for validating form details",
-		"dueDate": "05-10-2017",
-		"createdOn": "01-10-2017",
-		"completedOn": "",
-		"statusID": 4,
-		"statusName": "Planned"
-	},
-	{
-		"id": 2,
-		"taskName": "Setup base for the project",
-		"dueDate": "04-10-2017",
-		"createdOn": "01-10-2017",
-		"completedOn": "01-10-2017",
-		"statusID": 2,
-		"statusName": "Done"
-	},
-	{
-		"id": 3,
-		"taskName": "Automate the deployment using gitlab CI & CD",
-		"dueDate": "07-10-2017",
-		"createdOn": "02-10-2017",
-		"completedOn": "",
-		"statusID": 4,
-		"statusName": "Planned"
-	},
-	{
-		"id": 4,
-		"taskName": "Display task details using charts",
-		"dueDate": "09-10-2017",
-		"createdOn": "03-10-2017",
-		"completedOn": "05-10-2017",
-		"statusID": 2,
-		"statusName": "Done"
-	},
-	{
-		"id": 5,
-		"taskName": "Write automatation unit test cases for the project",
-		"dueDate": "15-10-2017",
-		"createdOn": "03-10-2017",
-		"completedOn": "",
-		"statusID": 1,
-		"statusName": "Blocked"
-	},
-	{
-		"id": 6,
-		"taskName": "Design user profile screen",
-		"dueDate": "11-10-2017",
-		"createdOn": "04-10-2017",
-		"completedOn": "",
-		"statusID": 3,
-		"statusName": "In Progress"
-	},
-	{
-		"id": 7,
-		"taskName": "Modify the color of planned tasks",
-		"dueDate": "07-10-2017",
-		"createdOn": "05-10-2017",
-		"completedOn": "",
-		"statusID": 1,
-		"statusName": "Blocked"
-	},
-	{
-		"id": 8,
-		"taskName": "Display task details in datatable",
-		"dueDate": "08-10-2017",
-		"createdOn": "05-10-2017",
-		"completedOn": "05-10-2017",
-		"statusID": 2,
-		"statusName": "Done"
-	},
-	{
-		"id": 9,
-		"taskName": "Design database for handling task details",
-		"dueDate": "10-10-2017",
-		"createdOn": "05-10-2017",
-		"completedOn": "",
-		"statusID": 3,
-		"statusName": "In Progress"
-	},
-	{
-		"id": 10,
-		"taskName": "Allow users to store uploaded files in server",
-		"dueDate": "13-10-2017",
-		"createdOn": "05-10-2017",
-		"completedOn": "",
-		"statusID": 1,
-		"statusName": "Blocked"
-	},
-	{
-		"id": 11,
-		"taskName": "Impelement token based authentication for the API",
-		"dueDate": "13-10-2017",
-		"createdOn": "07-10-2017",
-		"completedOn": "",
-		"statusID": 1,
-		"statusName": "Blocked"
-	},
-	{
-		"id": 12,
-		"taskName": "Improve speed of the website",
-		"dueDate": "08-10-2017",
-		"createdOn": "07-10-2017",
-		"completedOn": "",
-		"statusID": 4,
-		"statusName": "Planned"
-	},
-	{
-		"id": 13,
-		"taskName": "Send reminder mails to users whenever their task due date comes closer",
-		"dueDate": "07-10-2017",
-		"createdOn": "07-10-2017",
-		"completedOn": "08-10-2017",
-		"statusID": 2,
-		"statusName": "Done"
-	},
-	{
-		"id": 14,
-		"taskName": "Integrate Google map API with the portal",
-		"dueDate": "12-10-2017",
-		"createdOn": "09-10-2017",
-		"completedOn": "",
-		"statusID": 4,
-		"statusName": "Planned"
-	},
-	{
-		"id": 15,
-		"taskName": "Send mail to users whenever a task is assigned to them",
-		"dueDate": "12-10-2017",
-		"createdOn": "12-10-2017",
-		"completedOn": "",
-		"statusID": 4,
-		"statusName": "Planned"
-	}
+    {
+        "id": 1,
+        "taskName": "Create plugin for validating form details",
+        "dueDate": "05-10-2017",
+        "createdOn": "01-10-2017",
+        "completedOn": "",
+        "statusID": 4,
+        "statusName": "Planned"
+    },
+    {
+        "id": 2,
+        "taskName": "Setup base for the project",
+        "dueDate": "04-10-2017",
+        "createdOn": "01-10-2017",
+        "completedOn": "01-10-2017",
+        "statusID": 2,
+        "statusName": "Done"
+    },
+    {
+        "id": 3,
+        "taskName": "Automate the deployment using gitlab CI & CD",
+        "dueDate": "07-10-2017",
+        "createdOn": "02-10-2017",
+        "completedOn": "",
+        "statusID": 4,
+        "statusName": "Planned"
+    },
+    {
+        "id": 4,
+        "taskName": "Display task details using charts",
+        "dueDate": "09-10-2017",
+        "createdOn": "03-10-2017",
+        "completedOn": "05-10-2017",
+        "statusID": 2,
+        "statusName": "Done"
+    },
+    {
+        "id": 5,
+        "taskName": "Write automation unit test cases for the project",
+        "dueDate": "15-10-2017",
+        "createdOn": "03-10-2017",
+        "completedOn": "",
+        "statusID": 1,
+        "statusName": "Blocked"
+    },
+    {
+        "id": 6,
+        "taskName": "Design user profile screen",
+        "dueDate": "11-10-2017",
+        "createdOn": "04-10-2017",
+        "completedOn": "",
+        "statusID": 3,
+        "statusName": "In Progress"
+    },
+    {
+        "id": 7,
+        "taskName": "Modify the color of planned tasks",
+        "dueDate": "07-10-2017",
+        "createdOn": "05-10-2017",
+        "completedOn": "",
+        "statusID": 1,
+        "statusName": "Blocked"
+    },
+    {
+        "id": 8,
+        "taskName": "Display task details in data table",
+        "dueDate": "08-10-2017",
+        "createdOn": "05-10-2017",
+        "completedOn": "05-10-2017",
+        "statusID": 2,
+        "statusName": "Done"
+    },
+    {
+        "id": 9,
+        "taskName": "Design database for handling task details",
+        "dueDate": "10-10-2017",
+        "createdOn": "05-10-2017",
+        "completedOn": "",
+        "statusID": 3,
+        "statusName": "In Progress"
+    },
+    {
+        "id": 10,
+        "taskName": "Allow users to store uploaded files in server",
+        "dueDate": "13-10-2017",
+        "createdOn": "05-10-2017",
+        "completedOn": "",
+        "statusID": 1,
+        "statusName": "Blocked"
+    },
+    {
+        "id": 11,
+        "taskName": "Implement token based authentication for the API",
+        "dueDate": "13-10-2017",
+        "createdOn": "07-10-2017",
+        "completedOn": "",
+        "statusID": 1,
+        "statusName": "Blocked"
+    },
+    {
+        "id": 12,
+        "taskName": "Improve speed of the website",
+        "dueDate": "08-10-2017",
+        "createdOn": "07-10-2017",
+        "completedOn": "",
+        "statusID": 4,
+        "statusName": "Planned"
+    },
+    {
+        "id": 13,
+        "taskName": "Send reminder mails to users whenever their task due date comes closer",
+        "dueDate": "07-10-2017",
+        "createdOn": "07-10-2017",
+        "completedOn": "08-10-2017",
+        "statusID": 2,
+        "statusName": "Done"
+    },
+    {
+        "id": 14,
+        "taskName": "Integrate Google map API with the portal",
+        "dueDate": "12-10-2017",
+        "createdOn": "09-10-2017",
+        "completedOn": "",
+        "statusID": 4,
+        "statusName": "Planned"
+    },
+    {
+        "id": 15,
+        "taskName": "Send mail to users whenever a task is assigned to them",
+        "dueDate": "12-10-2017",
+        "createdOn": "12-10-2017",
+        "completedOn": "",
+        "statusID": 4,
+        "statusName": "Planned"
+    }
 ]
