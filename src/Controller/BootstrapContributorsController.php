@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-use Cake\Filesystem\File;
 use Cake\Core\Configure;
 
 /**
@@ -20,9 +19,7 @@ class BootstrapContributorsController extends AppController {
      * @return \Cake\Http\Response|void
      */
     public function index() {
-        $file = new File($this->getFileNameToReadInfo());
-        $contents = $file->read();
-        $file->close();
+        $contents = $this->getFileInfo($this->getFileNameToReadInfo());
         $this->success['data'] = json_decode($contents);
         return $this->sendJSONResponse($this->success);
     }

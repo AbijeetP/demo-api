@@ -3,8 +3,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
-require_once __DIR__ . '/../Model/Table/TasksStatusesTable.php';
+use Cake\Core\Configure;
 
 /**
  * TaskStatuses Controller
@@ -16,7 +15,6 @@ class TaskStatusesController extends AppController {
     
     public function initialize() {
         parent::initialize();
-        $this->TasksStatuses = new \App\Model\Table\TaskStatusesTable();
     }
     
     /**
@@ -25,8 +23,8 @@ class TaskStatusesController extends AppController {
      * @return \Cake\Http\Response|void
      */
     public function index() {
-        $arrTaskStatuses = $this->TasksStatuses->getAllTaskStatuses();
-        $this->success['data'] = $arrTaskStatuses;
+        $taskStatus = $this->getFileInfo(Configure::read('GET_ALL_TASK_STATUSES'));
+        $this->success['data'] = json_decode($taskStatus);
         return $this->sendJSONResponse($this->success);
     }
 

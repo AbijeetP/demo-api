@@ -3,8 +3,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
-require_once __DIR__ . '/../Model/Table/TasksTable.php';
+use Cake\Core\Configure;
 
 /**
  * Tasks Controller
@@ -16,7 +15,6 @@ class TasksController extends AppController {
 
     public function initialize() {
         parent::initialize();
-        $this->Tasks = new \App\Model\Table\TasksTable();
     }
 
     /**
@@ -26,8 +24,8 @@ class TasksController extends AppController {
      */
     public function index() {
         // For returning all the tasks
-        $arrTasks = $this->Tasks->getAllTasks();
-        $this->success['data'] = $arrTasks;
+        $allTasks = $this->getFileInfo(Configure::read('GET_ALL_TASKS'));
+        $this->success['data'] = json_decode($allTasks);
         return $this->sendJSONResponse($this->success);
     }
 
@@ -36,8 +34,8 @@ class TasksController extends AppController {
      * @return type
      */
     public function fetchTasksByStatus() {
-        $arrTasks = $this->Tasks->getTasksByStatus();
-        $this->success['data'] = $arrTasks;
+        $taskDtls = $this->getFileInfo(Configure::read('GET_TASKS_BY_STATUS'));
+        $this->success['data'] = json_decode($taskDtls);
         return $this->sendJSONResponse($this->success);
     }
 
@@ -46,8 +44,8 @@ class TasksController extends AppController {
      * @return type
      */
     public function getCompletedTasksByDay() {
-        $arrTasks = $this->Tasks->getCompletedTasksByDay();
-        $this->success['data'] = $arrTasks;
+        $taskDtls = $this->getFileInfo(Configure::read('GET_COMPLETED_TASKS_PER_DAY'));
+        $this->success['data'] = json_decode($taskDtls);
         return $this->sendJSONResponse($this->success);
     }
 

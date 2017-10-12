@@ -18,6 +18,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\Filesystem\File;
 
 /**
  * Application Controller
@@ -85,6 +86,18 @@ class AppController extends Controller {
         ) {
             $this->set('_serialize', true);
         }
+    }
+    
+    /**
+     * Returns file contents
+     * @param type $fileName
+     * @return type
+     */
+    public function getFileInfo($fileName){
+        $file = new File($fileName);
+        $contents = $file->read();
+        $file->close();
+        return $contents;
     }
 
 }
